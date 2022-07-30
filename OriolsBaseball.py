@@ -10,5 +10,3 @@ if x == 1:
   if x is 10 or x is 16 or x is 36 or x is 19:
     print("\nWhich player wears number " + x + " on his jersey? ")
     x = input()
-    
-    
