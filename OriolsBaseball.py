@@ -1,6 +1,7 @@
-from ast import Num
-
-
+jones = 10
+mancini = 16
+joseph = 36
+davis = 19
 print("Type 1 to enter a number or 2 to enter a name: ")
 x = input()
 if x == 1:
