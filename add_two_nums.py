@@ -25,6 +25,4 @@ def addTwoNumbers(l1, l2):
   else:
     new_val = new_num % 10
     ans = ListNode()
-    while new_num > 0:
-      
-      new_node = ListNode()
+    #continue to figure out linked list adding
