@@ -32,4 +32,4 @@ def romanToInt(s):
   return ans
 
 #Testing
-print(romanToInt('MCMXCIV'))
+print(romanToInt('I'))
