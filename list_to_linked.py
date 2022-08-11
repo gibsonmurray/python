@@ -12,13 +12,13 @@ def linkedListMaker(list: list) -> ListNode:
     ans = new
     for i in range(1, len(list)):
       curr = new
-      new = ListNode(list[i], curr)
+      new = ListNode(list[i])
       curr.next = new
   return ans
 
 #Tests
-list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-head = linkedListMaker(list)
-for i in range(len(list)):
-  print(head.val)
-  head = head.next
+# list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+# head = linkedListMaker(list)
+# for i in range(len(list)):
+#   print(head.val, end=' ')
+#   head = head.next

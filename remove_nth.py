@@ -21,6 +21,11 @@ def removeNthFromEnd(head: list_to_linked.ListNode, n : int):
   return head
 
 #Tests 
-node2 = ListNode(2)
-node1 = ListNode(1, node2)
-print(removeNthFromEnd(node1, 2).val)
+list = [6,3,4,9,0,2,1,6,2,8,1,2,6,3,5,0,7,8,1]
+print(list)
+n = 4
+linked = list_to_linked.linkedListMaker(list)
+ans = removeNthFromEnd(linked, n)
+while ans != None:
+  print(ans.val, end=' ')
+  ans = ans.next
