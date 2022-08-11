@@ -9,4 +9,5 @@ def intToRoman(num):
   return ans
 
 #Tests
-print(intToRoman(1994))
+ans = intToRoman(1994)
+print(ans)
