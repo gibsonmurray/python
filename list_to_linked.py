@@ -13,6 +13,7 @@ def linkedListMaker(list: list) -> ListNode:
     for i in range(1, len(list)):
       curr = new
       new = ListNode(list[i], curr)
+      curr.next = new
   return ans
 
 #Tests
