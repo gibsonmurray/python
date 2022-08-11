@@ -1,35 +1,17 @@
 def romanToInt(s):
-  romans = {'I' : 1, 'V' : 5, 'X' : 10, 'L' : 50, 'C' : 100, 'D' : 500, 'M' : 1000}
+  romans = {'M' : 1000, 'CM' : 900, 'D' : 500, 'CD' : 400, 'C' : 100, 'XC' : 90, 
+            'L' : 50, 'XL' : 40, 'X' : 10, 'IX' : 9, 'V' : 5, 'IV' : 4, 'I' : 1,}
   ans = 0
-  #subtraction cases
-  if 'IV' in s:
-    ans = ans + 4
-    index = s.index('IV') #get index of substring
-    s = s[:index] + s[index + 2:] #remove substring using slicing + concatenation (2 for 2 characters)
-  if 'IX' in s:
-    ans = ans + 9
-    index = s.index('IX')
-    s = s[:index] + s[index + 2:]
-  if 'XL' in s:
-    ans = ans + 40
-    index = s.index('XL')
-    s = s[:index] + s[index + 2:]
-  if 'XC' in s:
-    ans = ans + 90
-    index = s.index('XC')
-    s = s[:index] + s[index + 2:]
-  if 'CD' in s:
-    ans = ans + 400
-    index = s.index('CD')
-    s = s[:index] + s[index + 2:]
-  if 'CM' in s:
-    ans = ans + 900
-    index = s.index('CM')
-    s = s[:index] + s[index + 2:]
-  #all other letters
-  for letter in s:
-    ans = ans + romans.get(letter)
+  for key in romans:
+    if len(key) > 1:
+      while key in s[:2]:
+        ans = ans + romans.get(key)
+        s = s[2:]
+    else:
+      while key in s[:1]:
+        ans = ans + romans.get(key)
+        s = s[1:]
   return ans
 
 #Testing
-print(romanToInt('I'))
+print(romanToInt('MCMXCIV'))
