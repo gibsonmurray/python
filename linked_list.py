@@ -15,3 +15,7 @@ def linkedListMaker(list: list) -> ListNode:
       new = ListNode(list[i])
       curr.next = new
   return ans
+
+# indexed starting at 1
+def insert(head: ListNode, node: ListNode, n: int) -> ListNode:
+  
