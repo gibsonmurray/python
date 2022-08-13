@@ -15,10 +15,3 @@ def linkedListMaker(list: list) -> ListNode:
       new = ListNode(list[i])
       curr.next = new
   return ans
-
-#Tests
-# list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-# head = linkedListMaker(list)
-# for i in range(len(list)):
-#   print(head.val, end=' ')
-#   head = head.next
