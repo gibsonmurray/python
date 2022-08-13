@@ -1,6 +1,6 @@
-import list_to_linked
+import linked_list
 
-def removeNthFromEnd(head: list_to_linked.ListNode, n : int):
+def removeNthFromEnd(head: linked_list.ListNode, n : int):
   tracker = []
   curr = head
   while curr != None:
@@ -24,7 +24,7 @@ def removeNthFromEnd(head: list_to_linked.ListNode, n : int):
 list = [1, 2, 3, 4]
 print(list)
 n = 1
-linked = list_to_linked.linkedListMaker(list)
+linked = linked_list.linkedListMaker(list)
 ans = removeNthFromEnd(linked, n)
 while ans != None:
   print(ans.val, end=' ')
