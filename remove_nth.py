@@ -12,7 +12,7 @@ def removeNthFromEnd(head: list_to_linked.ListNode, n : int):
     head = head.next
   # Middle or last node case
   elif (len(tracker) > 1):
-    for i in range(len(tracker) - n):
+    for i in range(len(tracker) - n - 1):
       curr = curr.next
     curr.next = curr.next.next
   # Empty list case
@@ -21,9 +21,9 @@ def removeNthFromEnd(head: list_to_linked.ListNode, n : int):
   return head
 
 #Tests 
-list = [6,3,4,9,0,2,1,6,2,8,1,2,6,3,5,0,7,8,1]
+list = [1, 2, 3, 4]
 print(list)
-n = 4
+n = 1
 linked = list_to_linked.linkedListMaker(list)
 ans = removeNthFromEnd(linked, n)
 while ans != None:
