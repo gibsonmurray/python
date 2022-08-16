@@ -19,6 +19,18 @@ def linkedListMaker(list: list) -> ListNode:
 # indexed starting at 1
 def insert(head: ListNode, node: ListNode, n: int) -> ListNode:
   curr = head
-  for i in range(n - 1):
+  for i in range(n - 2):
     curr = curr.next
+  node.next = curr.next
+  curr.next = node
+  return head
+
+#Tests
+head = linkedListMaker([1, 2, 3, 4, 5, 6])
+new_node = ListNode(8)
+insert(head, new_node, 7)
+curr = head
+while curr != None:
+  print(curr.val, end=' ')
+  curr = curr.next
   
