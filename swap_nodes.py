@@ -9,7 +9,8 @@ def swapNodes(self, head: linked_list.ListNode, k: int) -> linked_list.ListNode:
   curr = head
   # First & last node case
   if k == 1:
-    temp = head
-    while curr != None:
-      
+    while curr.next != None:
+      curr = curr.next
+    curr.next = head
+    
     
