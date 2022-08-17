@@ -26,11 +26,11 @@ def insert(head: ListNode, node: ListNode, n: int) -> ListNode:
   return head
 
 #Tests
-head = linkedListMaker([1, 2, 3, 4, 5, 6])
-new_node = ListNode(8)
-insert(head, new_node, 7)
-curr = head
-while curr != None:
-  print(curr.val, end=' ')
-  curr = curr.next
+# head = linkedListMaker([1, 2, 3, 4, 5, 6])
+# new_node = ListNode(8)
+# insert(head, new_node, 7)
+# curr = head
+# while curr != None:
+#   print(curr.val, end=' ')
+#   curr = curr.next
   
