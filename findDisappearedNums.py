@@ -1,4 +1,4 @@
-def findDisappearedNumbers(nums: List[int]) -> List[int]:
+def findDisappearedNumbers(nums: list[int]) -> list[int]:
     n = len(nums)
     ans = []
     numsInNums = {}
